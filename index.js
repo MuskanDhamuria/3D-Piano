@@ -368,26 +368,26 @@ dustPoints.name = 'dustPoints';
 scene.add(dustPoints);
 
 // Background wall
-const curtainGeo = new THREE.PlaneGeometry(40, 18);
-const curtainMat = new THREE.MeshStandardMaterial({ color: 0x08080e, roughness: 0.95 });
-const curtain = new THREE.Mesh(curtainGeo, curtainMat);
-curtain.name = 'curtain';
-curtain.position.set(0, 4, -12);
-curtain.receiveShadow = true;
-scene.add(curtain);
+// const curtainGeo = new THREE.PlaneGeometry(40, 18);
+// const curtainMat = new THREE.MeshStandardMaterial({ color: 0x08080e, roughness: 0.95 });
+// const curtain = new THREE.Mesh(curtainGeo, curtainMat);
+// curtain.name = 'curtain';
+// curtain.position.set(0, 4, -12);
+// curtain.receiveShadow = true;
+// scene.add(curtain);
 
 // Volumetric light shafts
-[{ x: -5, col: 0x3333ff }, { x: 0, col: 0x6633ff }, { x: 5, col: 0xff3366 }].forEach(({ x, col }, i) => {
-  const coneGeo = new THREE.ConeGeometry(1.8, 9, 32, 1, true);
-  const coneMat = new THREE.MeshBasicMaterial({
-    color: col, transparent: true, opacity: 0.04, side: THREE.FrontSide, depthWrite: false
-  });
-  const cone = new THREE.Mesh(coneGeo, coneMat);
-  cone.name = `lightShaft_${i}`;
-  cone.position.set(x, 5.5, -1);
-  cone.rotation.z = Math.PI;
-  scene.add(cone);
-});
+// [{ x: -5, col: 0x3333ff }, { x: 0, col: 0x6633ff }, { x: 5, col: 0xff3366 }].forEach(({ x, col }, i) => {
+//   const coneGeo = new THREE.ConeGeometry(1.8, 9, 32, 1, true);
+//   const coneMat = new THREE.MeshBasicMaterial({
+//     color: col, transparent: true, opacity: 0.04, side: THREE.FrontSide, depthWrite: false
+//   });
+//   const cone = new THREE.Mesh(coneGeo, coneMat);
+//   cone.name = `lightShaft_${i}`;
+//   cone.position.set(x, 5.5, -1);
+//   cone.rotation.z = Math.PI;
+//   scene.add(cone);
+// });
 
 // ─── Note Particles ──────────────────────────────────────────────────────────
 const particleGroup = new THREE.Group();
@@ -523,7 +523,7 @@ hud.innerHTML = `
   <div style="font-size:13px;font-weight:700;letter-spacing:0.12em;margin-bottom:9px;
     color:transparent;background:linear-gradient(90deg,#8877ff,#ff66aa);
     -webkit-background-clip:text;background-clip:text;text-transform:uppercase;">
-    🎹 Digital Piano
+    Digital Piano
   </div>
   <div style="font-size:11px;line-height:1.8;color:#888;letter-spacing:0.04em;">
     <span style="color:#ccc;font-weight:600;">White keys:</span>
@@ -533,7 +533,7 @@ hud.innerHTML = `
     <span style="color:#aaa;"> W E T Y U O P</span>
   </div>
   <div style="margin-top:5px;font-size:10px;color:#555;letter-spacing:0.06em;">
-    Click keys · Use keyboard · Drag to glide
+    
   </div>
 `;
 document.body.appendChild(hud);
